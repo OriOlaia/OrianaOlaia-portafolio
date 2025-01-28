@@ -15,10 +15,6 @@ const identity = {
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "MySQL", "Canva"];
 
-const happy = true;
-const finished = true;
-const goal = 3;
-
 const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
@@ -57,12 +53,9 @@ const textCase = "uppercase";
     <p>Mis habilidades son:</p>
     <ul>
     {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>       
-    {happy && <p>¡Estoy feliz de aprender Astro!</p>}
+    </ul>
+    <p>Lo terminé en un solo dia el tutorial, despues seguiré agregando más cosas e ir mejorando</p>
 
-    {finished && <p>¡He terminado este tutorial!</p>}
-
-    {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
     <Footer />
     <script>
         import "../scripts/menu.js";
