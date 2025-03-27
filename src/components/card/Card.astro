@@ -1,9 +1,14 @@
 ---
-import './Card.module.css';
+import './Card.Module.css';
 const title = 'Manos que Bailan';
 const text = 'Curso de lengua de señas Argentina';
+const language = ['React', 'NextJS','PrismaSQL','MySQL', 'NodeJs']
 ---
 <div class="card">
     <h1>{title}</h1>
     <p>{text}</p>
+    <ul>
+        {language.map((lan)=><li class="lan">{lan}</li> )}
+    </ul>
+    <button><a href="">DEMO</a></button>
 </div>

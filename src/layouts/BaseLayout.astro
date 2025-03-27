@@ -3,6 +3,9 @@ import Header from "../components/header/Header.astro";
 import Footer from "../components/footer/Footer.astro";
 import "../styles/global.css";
 const pageTitle = "Oriana Olaia";
+
+
+
 ---
 
 <html lang="es">
@@ -13,8 +16,11 @@ const pageTitle = "Oriana Olaia";
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
   </head>
-  
   <body>
     <Header />
     <slot />
