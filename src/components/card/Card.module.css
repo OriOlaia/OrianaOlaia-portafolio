@@ -1,0 +1,6 @@
+.card{
+    background: black;
+}
+.card h1,p{
+    color: red;
+}

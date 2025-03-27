@@ -1,9 +1,10 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
-const pageTitle = "Página de inicio";
+import Header from "../components/header/Header.astro";
+import Footer from "../components/footer/Footer.astro";
+import "../styles/global.css";
+const pageTitle = "Oriana Olaia";
 ---
+
 <html lang="es">
   <head>
     <meta charset="utf-8" />
@@ -11,14 +12,12 @@ const pageTitle = "Página de inicio";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+
   </head>
+  
   <body>
     <Header />
-    <h1>{pageTitle}</h1>
     <slot />
     <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
   </body>
 </html>

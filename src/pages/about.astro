@@ -1,10 +1,7 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-
 import '../styles/global.css';
-
-const pageTitle = "Sobre mi";
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Oriana Olaia";
 
 const identity = {
   firstName: "Oriana",
@@ -13,11 +10,11 @@ const identity = {
   hobbies: ["content creator", "videogames", "volleyball"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "MySQL", "Canva"];
+const skills = ["React", "Astro", "Python", "MySQL", "Canva"];
+const frameworks = ["NextJS","Bootstrap"];
+const codestudio = ["Spyder", "Visual Studio Code", "Oracle", "SublimeText", "Android Studio"];
+const utilites = ["Canva", "Filmora", "Notion", "Trello"];
 
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 <html lang="es">
   <head>
@@ -25,23 +22,8 @@ const textCase = "uppercase";
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
 
-    <style define:vars={{skillColor, fontWeight, textCase}}>
-        h1 {
-          color: purple;
-          font-size: 4rem;
-        }
-        .skill {
-          color: var(--skillColor);
-          font-weight: var(--fontWeight);
-          text-transform: var(--textCase);
-        }
-      </style>
-
   </head>
-  <body>
-    <Header />
-    <h1>{pageTitle}</h1>
-    
+  <BaseLayout>
     <p>He aquí algunos datos sobre mí:</p>
     <ul>
     <li>Me llamo {identity.firstName}.</li>
@@ -50,15 +32,23 @@ const textCase = "uppercase";
         <li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
     }
     </ul>
-    <p>Mis habilidades son:</p>
-    <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-    <p>Lo terminé en un solo dia el tutorial, despues seguiré agregando más cosas e ir mejorando</p>
-
-    <Footer />
-    <script>
-        import "../scripts/menu.js";
-      </script>
-</body>
+    <div class="habilidades">
+      <p>Mis habilidades son:</p>
+      <ul>
+        {skills.map((skill) => <li class="skill">{skill}</li>)}
+      </ul>
+      <p>Frameworks:</p>
+      <ul>
+        {frameworks.map((frame) => <li class="frame">{frame}</li>)}
+      </ul>
+    </div>
+    <div class="herramientas">
+      <p>Herramientas que uso:</p>
+      <ul>
+        {utilites.map((utilit) => <li class="utilit">{utilit}</li>)}
+      
+        {codestudio.map((code)=> <li class="code">{code}</li>)}
+      </ul>
+    </div>
+</BaseLayout>
 </html>

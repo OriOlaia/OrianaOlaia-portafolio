@@ -1,9 +1,54 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting';
+import Skill from "../components/Skill.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Image from "astro/components/Image.astro";
 const { pageTitle } = Astro.props;
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-  <h2>Mi impresionante subtítulo del blog</h2>
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+  <div class="presentacion">
+    <Image
+      src="/ImagenOriOlaia.jpeg"
+      alt="Foto Ori Olaia"
+      width="300"
+      height="300"
+      style={
+        "border-radius: 300px;"
+        }
+    />
+    <div class="descripcion">
+      <h1>Oriana Olaia</h1>
+      <h2>Desarrolladora de Software desde Argentina</h2>
+      <p>
+        Soy una apasionada de los videojuegos, soy streamer donde mayormente
+        estoy jugando a juegos variados
+      </p>
+    </div>
+  </div>
+  <div>
+    Contacto
+    <h2>Social</h2>
+    <ul>
+      <li>GitHub</li>
+      <li>Linkedin</li>
+      <li>Codepen</li>
+      <li>Masto</li>
+      <li>Twitter</li>
+    </ul>
+    <p>Correo</p>
+  </div>
+  <div>
+    <h2>Habilidades Tecnicas</h2>
+    <div class="lengdeprog">
+      <h3>Lenguaje de programacion</h3>
+      <Skill />
+    </div>
+    <div class="otros">
+      <h3>Otros</h3>
+    </div>
+  </div>
+  <div>
+    <h3>Proyectos</h3>
+  </div>
+  
 </BaseLayout>

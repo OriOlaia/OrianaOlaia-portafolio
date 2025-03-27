@@ -1,0 +1,34 @@
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+  }
+  
+  h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+  }
+
+/*NAVIGATION*/
+
+  .nav-links a{
+    padding: 1rem;
+    color: #f1f5f9; 
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    border-radius: 7px;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    transition: 1s;
+    border-radius: 7px;
+  }
