@@ -1,12 +1,29 @@
 ---
-import "./Header.Module.css"
+import Nav from "@/components/nav/Nav.astro"
+const siteTitle= "OO"
 ---
 <header>
-    <h1>Oriana Olaia</h1>
-  <nav>
-    <div class="nav-links">
-      <a href="/">Inicio</a>
-      <a href="/about">Sobre mi</a>
-    </div>
-  </nav>
+    <h1>{siteTitle}</h1>
+    <Nav />
 </header>
+<style>
+  
+header {
+  position:absolute;
+  width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  
+  h1 {
+    margin: -0.5rem 0;
+    padding-left: 2rem;
+    font-size: 2.5rem;
+  }
+
+</style>
