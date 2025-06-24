@@ -1,5 +1,6 @@
 ---
 import Image from "astro/components/Image.astro";
+import { personalInfo } from "@/lib/data";
 ---
 <section class="presentacion">
     <Image
@@ -13,12 +14,30 @@ import Image from "astro/components/Image.astro";
       }}
     />
     <div class="description">
-      <h2>Programadora desde Argentina</h2>
+      <h1>{personalInfo.name}</h1>
+      <h2>Programadora desde {personalInfo.location}</h2>
       <p>
         Soy una apasionada de los videojuegos, streamer donde mayormente
         estoy jugando a juegos variados
       </p>
-      <p>GitHub - Linkedin - Codepen - Masto - Twitter - Correo </p>
-      <button>CV PDF</button>
+      <div>
+        <li><a href={personalInfo.email}>Mi correo</a></li>
+        <li><a href={personalInfo.github}>GitHub</a></li>
+        <li><a href={personalInfo.linkedin}>Linkedin</a></li>
       </div>
+    </div>
   </section>
+  <style>
+    .presentacion{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    }
+    .description{
+    margin-left: 80px;
+    width: 450px;
+    color: #FFF;
+}
+  </style>

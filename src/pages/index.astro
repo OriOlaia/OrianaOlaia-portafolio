@@ -4,13 +4,20 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import SectionPresentation from "@/components/SectionPresentation.astro";
 import SectionProjects from "@/components/SectionProjects.astro"
 import SectionSkills from "@/components/SectionSkills.astro"
-import "./Index.Module.css";
+import SectionAbout from "@/components/SectionAbout.astro";
+
+import "@/styles/global.css";
 
 const { pageTitle } = Astro.props;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <SectionPresentation />
+  <SectionAbout />
   <SectionProjects />
   <SectionSkills />
 </BaseLayout>
+<style>
+
+
+</style>
