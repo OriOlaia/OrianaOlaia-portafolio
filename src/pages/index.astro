@@ -1,46 +1,16 @@
 ---
-import Skill from "../components/Skill.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Image from "astro/components/Image.astro";
-import Card from "../components/card/Card.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import SectionPresentation from "@/components/SectionPresentation.astro";
+import SectionProjects from "@/components/SectionProjects.astro"
+import SectionSkills from "@/components/SectionSkills.astro"
 import "./Index.Module.css";
-import Utilites from "../components/Utilites.astro";
-import Other from "../components/Other.astro"
+
 const { pageTitle } = Astro.props;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="presentacion">
-    <Image
-      src="/assets/ImagenOriOlaia.jpeg"
-      alt="Foto Ori Olaia"
-      width="350"
-      height="350"
-      style={{
-        filter: "drop-shadow(4px 4px 2px rgba(0, 0, 0, 1))",
-        borderRadius: "300px",
-      }}
-    />
-    <div class="description">
-      <h2>Programadora desde Argentina</h2>
-      <p>
-        Soy una apasionada de los videojuegos, streamer donde mayormente
-        estoy jugando a juegos variados
-      </p>
-      <p>GitHub - Linkedin - Codepen - Masto - Twitter - Correo </p>
-      <button>CV PDF</button>
-      </div>
-  </div>
-  <div class="projects">
-    <h1>Proyectos</h1>
-    <Card />
-  </div>
-  <div class="habili">
-    <h2>Habilidades Tecnicas</h2>
-    <div class="lista">
-      <Skill />
-      <Utilites />
-      <Other />
-    </div>
-  </div>
+  <SectionPresentation />
+  <SectionProjects />
+  <SectionSkills />
 </BaseLayout>

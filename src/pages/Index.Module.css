@@ -1,6 +1,6 @@
 /*PRESENTACION*/
-body{
-    color: white;
+section{
+    height: 100vh;
 }
 .presentacion{
     padding: 20px;
@@ -11,6 +11,7 @@ body{
 .description{
     margin-left: 80px;
     width: 450px;
+    color: #FFF;
 }
 
 /*PROYECTOS*/
