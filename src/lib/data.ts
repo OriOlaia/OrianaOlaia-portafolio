@@ -4,6 +4,8 @@ export const personalInfo = {
   email: "oriana.olaia17@gmail.com",
   github: "https://github.com/OriOlaia",
   linkedin: "https://www.linkedin.com/in/oriana-olaia/",
+  occupation: "Streamer, Freelancer",
+  hobbies: ["content creator", "videogames", "volleyball"],
 };
 
 export const workExperience = [
@@ -85,14 +87,28 @@ export const education = [
     ],
   },
 ];
-export const skills = {
+export const skillsData = {
   programmingLanguages: [
-    "Python",
-    "Astro",
+    "Reactjs",
     "Nextjs",
-    "Reactjs","Zustand","PrismaSQL"],
-  utillity:["Filmora", "Canva", "Figma", "Git", "GitHub Desktop"],
-  language:["Lengua de señas Argentina","Inglés", "Japonés"],
+    "Astro",
+    "Python",
+    "Zustand",
+    "PrismaSQL"],
+  },
+  utillity:[
+    "Filmora",
+    "Canva",
+    "Figma",
+    "Git",
+    "GitHub Desktop",
+    "Notion",
+    "Trello"],
+    
+  language:[
+    "Lengua de señas Argentina",
+    "Inglés",
+    "Japonés"],
 };
 
 export const projects = [

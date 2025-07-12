@@ -1,14 +1,6 @@
 ---
-import '../styles/global.css';
-import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Oriana Olaia";
-
-const identity = {
-  firstName: "Oriana",
-  country: "Mendoza, Argentina",
-  occupation: "Streamer, Freelancer",
-  hobbies: ["content creator", "videogames", "volleyball"],
-};
+import { personalInfo } from "@/lib/data";
 
 const skills = ["React", "Astro", "Python", "MySQL", "Canva"];
 const frameworks = ["NextJS","Bootstrap"];
@@ -20,10 +12,10 @@ const utilites = ["Canva", "Filmora", "Notion", "Trello"];
 
     <p>He aquí algunos datos sobre mí:</p>
     <ul>
-        <li>Me llamo {identity.firstName}.</li>
-        <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
-        {identity.hobbies.length >= 2 &&
-        <li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
+        <li>Me llamo {personalInfo.name}.</li>
+        <li>Vivo en {personalInfo.location} y trabajo como {personalInfo.occupation}.</li>
+        {personalInfo.hobbies.length >= 2 &&
+        <li>Dos de mis aficiones son: {personalInfo.hobbies[0]} y {personalInfo.hobbies[1]}</li>
     }
     </ul>
     <div class="habilidades">

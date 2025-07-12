@@ -1,6 +1,8 @@
 ---
 import Image from "astro/components/Image.astro";
 import { personalInfo } from "@/lib/data";
+
+const subtitle = ["Software Developer", "Content Creator","Front-End Dev", "Service Technical", "Deaf and Hipocusic"]
 ---
 <section class="presentacion">
     <Image
@@ -15,7 +17,8 @@ import { personalInfo } from "@/lib/data";
     />
     <div class="description">
       <h1>{personalInfo.name}</h1>
-      <h2>Programadora desde {personalInfo.location}</h2>
+      <h2>{subtitle}</h2>
+      <h3>Programadora desde {personalInfo.location}</h3>
       <p>
         Soy una apasionada de los videojuegos, streamer donde mayormente
         estoy jugando a juegos variados
