@@ -1,20 +1,20 @@
 ---
-import { skills } from "@/lib/data";
+import { skillsData } from "@/lib/data";
 ---
 <section class="habili">
     <h2>Habilidades Tecnicas</h2>
     <div class="lista">
       <h3 class="Skill">Lenguajes de programacion</h3>
       <ul>
-        {skills.programmingLanguages.map((proglan) => <li class="proglan">{proglan}</li>)}
+        {skillsData.programmingLanguages.map((proglan) => <li class="proglan">{proglan}</li>)}
       </ul>
       <h3 class="Utilites">Herramientas</h3>
       <ul>
-        {skills.utillity.map((utilly) => <li class="utilly">{utilly}</li>)}
+        {skillsData.utillity.map((utilly) => <li class="utilly">{utilly}</li>)}
       </ul>
       <h3 class="Other">Otro</h3>
       <ul>
-        {skills.language.map((lang) => <li class="lang">{lang}</li>)}
+        {skillsData.language.map((lang) => <li class="lang">{lang}</li>)}
       </ul>
     </div>
   </section>

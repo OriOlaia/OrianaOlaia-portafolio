@@ -95,21 +95,21 @@ export const skillsData = {
     "Python",
     "Zustand",
     "PrismaSQL"],
-  },
-  utillity:[
+  
+  utillity: [
     "Filmora",
     "Canva",
     "Figma",
     "Git",
     "GitHub Desktop",
     "Notion",
-    "Trello"],
-    
-  language:[
+    "Trello"]
+  ,
+  language: [
     "Lengua de señas Argentina",
     "Inglés",
-    "Japonés"],
-};
+    "Japonés"]
+  };
 
 export const projects = [
   {
