@@ -1,0 +1,10 @@
+---
+// Bloque de scripts: importaciones y props
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+<h2>{title}</h2>
+<p>Este es un componente 100% Astro + TypeScript.</p>
