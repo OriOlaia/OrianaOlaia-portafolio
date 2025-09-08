@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Oriana Olaia",
   location: "Mendoza, Argentina",
-  email: "oriana.olaia17@gmail.com",
+  email: "malito:oriana.olaia17@gmail.com",
   github: "https://github.com/OriOlaia",
   linkedin: "https://www.linkedin.com/in/oriana-olaia/",
   occupation: "Streamer, Freelancer",
@@ -87,41 +87,28 @@ export const education = [
     ],
   },
 ];
-export const skillsData = {
-  programmingLanguages: [
-    "Reactjs",
-    "Nextjs",
-    "Astro",
-    "Python",
-    "Zustand",
-    "PrismaSQL"],
-  
-  utillity: [
-    "Filmora",
-    "Canva",
-    "Figma",
-    "Git",
-    "GitHub Desktop",
-    "Notion",
-    "Trello"]
-  ,
-  language: [
-    "Lengua de señas Argentina",
-    "Inglés",
-    "Japonés"]
-  };
-
 export const projects = [
   {
     title: "Manos que Bailan",
+    image: null,
     github: "https://github.com/OriOlaia/manosquebailan-front",
+    link: null,
     description: [
       "Curso de lenguas de señas Argentina",
       "Gratituo y muy accesible, apto para todos",
-      "NextJS, React, PrismaSQL",
     ],
+    languages: ["NextJS", "React", "PrismaSQL"],
+  },{
+    title: "Mi portafolio",
+    image: "/assets/miportfolio-orianaolaia.png",
+    github: "https://github.com/OriOlaia/manosquebailan-front",
+    link:"https://oriolaia.netlify.app",
+    description: [
+      "Mi curriculum, proyectos y experiencia",
+    ],
+    languages: ["Astro", "Typescript", "CSS" ],
   },
-];
+  ];
 
 export const awards = [
   {
