@@ -1,24 +1,99 @@
 ---
 import Image from "astro/components/Image.astro";
+import { personalInfo } from "@/lib/data";
+
+// const subtitle = ["Software Developer", "Content Creator","Front-End Dev", "Service Technical", "Deaf and Hipocusic"]
 ---
-<section class="presentacion">
+<section class="presentacion" id="presentation">
     <Image
       src="/assets/ImagenOriOlaia.jpeg"
       alt="Foto Ori Olaia"
-      width="350"
-      height="350"
+      width="450"
+      height="450"
       style={{
         filter: "drop-shadow(4px 4px 2px rgba(0, 0, 0, 1))",
         borderRadius: "300px",
       }}
     />
     <div class="description">
-      <h2>Programadora desde Argentina</h2>
+      <h1><span class="inicial">O</span>riana <span class="inicial">O</span>laia</h1>
+      <h2>Desarrolladora de Software</h2>
+      <h3>Programadora desde {personalInfo.location}</h3>
       <p>
-        Soy una apasionada de los videojuegos, streamer donde mayormente
-        estoy jugando a juegos variados
+        Apasionada por la tecnología y la programación. Me encanta aprender
+        y compartir mis conocimientos con amigos y comunidad.
+      <br>
+        Soy una apasionada de los <span>videojuegos</span>, <span>streamer</span> donde mayormente
+        estoy jugando a juegos variados como shooter, historia, retro.
       </p>
-      <p>GitHub - Linkedin - Codepen - Masto - Twitter - Correo </p>
-      <button>CV PDF</button>
+      <div class="listSocial">
+        <li><a href="mailto:oriana.olaia17@gmail.com"><img width="50" height="50"  src="/public/assets/gmail.png" alt="Mi correo"/></a></li>
+        <li><a href={personalInfo.github} target="_blank"><img width="50" height="50" src="/public/assets/github.png" alt="Mi github"/></a></li>
+        <li><a href={personalInfo.linkedin} target="_blank"><img width="50" height="50" src="/public/assets/linkedin.png" alt="Mi Linkedin"/></a></li>
       </div>
+    </div>
   </section>
+  <style>
+    .presentacion{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    }
+    .description{
+    margin-left: 150px;
+    width: 700px;
+    }
+    h1{
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+    h2{
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    h3{
+      font-size: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    p{
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+    li{
+      list-style: none;
+      display: inline;
+      margin-right: 15px;
+    }
+    li:hover{
+      transform: scale(1.2);
+      transition: 0.3s ease-in-out;
+    }
+    a{
+      color: #FFF;
+      font-size: 1.2rem;
+    }
+    .listSocial{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    img{
+      filter: drop-shadow( 0 0 10px #ffffff);
+    }
+    img:hover{
+      transition: 0.3s ease-in-out;
+      filter: drop-shadow( 0 0 20px #ffffff);
+    }
+    .inicial{
+      color: rgb(253, 189, 147);
+      text-shadow: #ff6600 0 0 10px;
+      font-size: 3.5rem;
+    }
+    span{
+      color: rgb(253, 189, 147);
+      font-weight: bold;
+    }
+  </style>

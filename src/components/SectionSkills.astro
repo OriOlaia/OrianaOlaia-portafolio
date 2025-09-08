@@ -1,11 +1,92 @@
 ---
-
+const utillity = [
+    "Filmora",
+    "Canva",
+    "Figma",
+    "Git",
+    "GitHub Desktop",
+    "Notion",
+    "Trello"];
 ---
-<section class="habili">
-    <h2>Habilidades Tecnicas</h2>
-    <div class="lista">
-      <h1 class="Skill">Skill</h1>
-      <h1 class="Utilites">Utilites</h1>
-      <h1 class="Other">Other</h1>
+<section class="habilidades"    id="skills">
+    <h1>Habilidades Tecnicas</h1>
+            <h2>Mis habilidades son:</h2>
+            <div class="languageProgramming">
+                <a href="https://es.react.dev" target="_blank"><img width="100" height="100" src="/public/assets/LanguageProgramming/react.png" alt="React"/>React</a>
+                <a href="https://nextjs.org" target="_blank"><img width="100" height="100" src="/public/assets/LanguageProgramming/nextjs.png" alt="Nextjs"/>Nextjs</a>
+                <a href="https://astro.build" target="_blank"><img width="100" height="100" src="/public/assets/LanguageProgramming/astro.png" alt="Astro"/>Astro</a>
+                <a href="https://www.python.org" target="_blank"><img width="100" height="100" src="/public/assets/LanguageProgramming/python.png" alt="Python"/>Python</a>
+                <a href="https://git-scm.com" target="_blank"><img width="100" height="100" src="/public/assets/Utillites/git.png" alt="Git"/>Git</a>
+                <a href="https://github.com" target="_blank"><img width="100" height="100" src="/public/assets/github.png" alt="GitHub"/>GitHub</a>
+                
+            </div>
+            <h2>Herramientas que uso:</h2>
+            <div class="utillites">
+                <a href="https://www.notion.com/es" target="_blank"><img width="100" height="100" src="/public/assets/Utillites/notion-white.png" alt="Notion"/>Notion</a>
+                <a href="https://www.canva.com/es_419" target="_blank"><img width="100" height="100" src="/public/assets/Utillites/canva.png" alt="Canva"/>Canva</a>
+                <a href="https://filmora.wondershare.es" target="_blank"><img width="100" height="100" src="/public/assets/Utillites/filmora.png" alt="Filmora"/>Filmora</a>
+                <a href="https://trello.com/es" target="_blank"><img width="100" height="100" src="/public/assets/Utillites/trello.png" alt="Filmora"/>Trello</a>
+            </div>
     </div>
   </section>
+  <style>
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .habilidades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+     scroll-margin-top: 80px;
+    }
+    .languageProgramming{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+    }
+    .utillites{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+    }
+    a{  
+        color: #FFF;
+        font-size: 1.2rem;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    a:hover{
+        font-size: 1.5rem;
+        transition: 0.3s ease-in-out;
+        transform: translateY(-5px);
+        margin-left: 10px;
+        margin-right: 10px;
+        
+    }
+    img{
+        filter: drop-shadow( 0 0 10px #ffffff);
+    }
+    img:hover{
+        
+        transform: scale(1.2);
+        transition: 0.3s ease-in-out;
+        filter: drop-shadow( 0 0 20px #ffffff);
+    }
+    .languageProgramming, .utillites {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+  </style>

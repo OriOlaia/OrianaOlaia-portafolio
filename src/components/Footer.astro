@@ -1,0 +1,28 @@
+---
+import { personalInfo } from "@/lib/data";
+---
+<footer>
+  <div>
+    <p>&copy; {new Date().getFullYear()} {personalInfo.name}. Todos los derechos reservaods. ✨</p>
+    <p>Hecho con 💻 y ❤️</p>
+  </div>
+
+</footer>
+
+<style>
+  footer {
+    position: absolute;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  div{
+    display: flex;
+    gap: 500px;
+  }
+  p{
+    color: #fff;
+  }
+</style>

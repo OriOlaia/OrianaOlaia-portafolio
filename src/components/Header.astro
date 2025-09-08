@@ -1,0 +1,56 @@
+---
+const siteTitle= "OO"
+---
+<header>
+    <h1>{siteTitle}</h1>
+    <nav>
+        <div class="nav-links">
+          <a href="/#presentation">Inicio</a>
+          <a href="/#sobre-mi">Sobre mi</a>
+          <a href="/#skills">Habilidades</a>
+          <a href="/#projects">Proyectos</a>
+          <a href="/#contact">Contacto</a>
+        </div>
+    </nav>
+</header>
+
+<style>
+  
+header {
+  position:fixed;
+  width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  
+  h1 {
+    margin: -0.5rem 0;
+    padding-left: 2rem;
+    font-size: 2.5rem;
+  }
+  /*NAVIGATION*/
+div{
+  padding-right: 2rem;
+}
+  .nav-links a{
+    padding: 1rem;
+    color: #f1f5f9; 
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    border-radius: 7px;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    transition: 1s;
+    border-radius: 7px;
+  }
+</style>

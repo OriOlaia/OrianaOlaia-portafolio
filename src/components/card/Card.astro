@@ -1,14 +1,117 @@
 ---
-import './Card.Module.css';
-const title = 'Manos que Bailan';
-const text = 'Curso de lengua de señas Argentina';
-const language = ['React', 'NextJS','PrismaSQL','MySQL', 'NodeJs']
+import { projects } from '@/lib/data';
 ---
-<div class="card">
-    <h1>{title}</h1>
-    <p>{text}</p>
-    <ul>
-        {language.map((lan)=><li class="lan">{lan}</li> )}
-    </ul>
-    <button><a href="">DEMO</a></button>
-</div>
+{projects.map((project) => (
+  <div class="card">
+      {project.image
+        ? <img src={project.image} alt={project.title} />
+        : <div class="no-image">SIN IMAGEN</div>
+      }
+      <h3>{project.title}</h3>
+      <p>{Array.isArray(project.description) ? project.description.join(' ') : project.description}</p>
+      <div class="card-languages">
+        {Array.isArray(project.languages) && project.languages.length > 0
+            ? project.languages.map(lang => <span class="language">{lang}</span>)
+            : project.language
+            ? <span class="language">{project.language}</span>
+            : <span class="language">Lenguaje no especificado</span>
+        }
+      </div>
+      <div class="card-buttons">
+        {project.link && (
+          <button><a href={project.link} target="_blank">Ver pagina</a></button>
+        )}
+        <button><a href={project.github} target="_blank">GitHub</a></button>
+      </div>
+  </div>
+))}
+
+<style>
+    .card {
+        background: rgb(112, 41, 0);
+        height: 475px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch; /* Cambiado de center a stretch */
+        justify-content: flex-start; /* Asegura que el contenido comience arriba */
+        border-radius: 50px;
+        overflow: hidden; /* Para que el border-radius afecte a la imagen */
+    }
+    .card:hover{
+        border: 5px solid white;
+        background: rgb(240, 149, 96);
+        box-shadow: 0px 0px 30px 5px rgb(240,149,96);
+        transition: 0.5s;
+    }
+    .card h3{
+        font-size: 2rem;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .card p{
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+    .card-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .card button{
+        padding: 10px;
+        height: 50px;
+        width: 100px;
+        border: none;
+        border-radius: 10px;
+        font-family: "Tektur", sans-serif;
+        font-size: 0.9rem;
+        cursor: pointer;
+    }
+    .card img,
+    .no-image {
+        height: 150px;
+        width: 100%; /* Cambiado a 100% */
+        object-fit: cover;
+        border-radius: 50px 50px 0 0;
+        margin-bottom: 10px;
+        display: block;
+
+        transition: transform 0.4s cubic-bezier(.4,2,.6,1);
+    }
+    .card:hover img,
+    .card:hover .no-image {
+        transform: scale(1.08);
+        z-index: 1;
+    }
+    .no-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff2;
+        color: #fff;
+        font-weight: bold;
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+    .card-languages {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .language {
+        background: #fff2;
+        color: #fff;
+        border-radius: 8px;
+        padding: 4px 10px;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+</style>

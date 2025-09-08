@@ -1,47 +1,88 @@
 ---
-import '../styles/global.css';
-import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Oriana Olaia";
 
-const identity = {
-  firstName: "Oriana",
-  country: "Mendoza, Argentina",
-  occupation: "Streamer, Freelancer",
-  hobbies: ["content creator", "videogames", "volleyball"],
-};
 
-const skills = ["React", "Astro", "Python", "MySQL", "Canva"];
-const frameworks = ["NextJS","Bootstrap"];
-const codestudio = ["Spyder", "Visual Studio Code", "Oracle", "SublimeText", "Android Studio"];
-const utilites = ["Canva", "Filmora", "Notion", "Trello"];
 
 ---
-<section>
+<section id="sobre-mi" class="about-me">
 
-    <p>He aquí algunos datos sobre mí:</p>
-    <ul>
-        <li>Me llamo {identity.firstName}.</li>
-        <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
-        {identity.hobbies.length >= 2 &&
-        <li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
-    }
-    </ul>
-    <div class="habilidades">
-        <p>Mis habilidades son:</p>
-        <ul>
-            {skills.map((skill) => <li class="skill">{skill}</li>)}
-        </ul>
-        <p>Frameworks:</p>
-        <ul>
-            {frameworks.map((frame) => <li class="frame">{frame}</li>)}
-        </ul>
+    <div class="datos-personales">
+        <h2>He aquí algunos datos sobre mí:</h2>
+        <p>Soy <span><a href="https://www.argentina.gob.ar/salud/glosario/hipoacusia-sordera">Hipoacusica</a></span>, sorda de nacimiento. <span>Mendocina</span> (AGUANTE EL MATE WACHÍN), unas de mis aficiones
+            son: <span>Creadora de contenido</span> y <span>Videojuegos</span>, tambien entreno <span>voley</span>, amo amo el deporte, desde los 8 años que llevo jugando.
+        </p>
+        <div class="creator">
+            <a href="http://www.twitch.tv/rabitori_" target="_blank"><img width="50" height="50" src="/public/assets/twitch.png" alt="Mi Twitch"></a>
+            <a href="http://www.kick.com/rabitori" target="_blank" class="kickShadow">Kick (no logo)</a>
+            <a href="http://www.youtube.com/rabbitori" target="_blank"><img width="50" height="50" src="/public/assets/youtube.png" alt="Mi Youtube"></a>
+        </div>
+        <p>
+            Actualmente estoy realizando cursos de desarrollo web, programación e IA, estoy en un grupo de <span>Robotica</a></span> en
+            <span>DaVinci de UTN San Rafael</span>. Me considero una persona proactiva, responsable y con muchas ganas de aprender y crecer en el mundo de la tecnología.
+        </p>
     </div>
-    <div class="herramientas">
-        <p>Herramientas que uso:</p>
-        <ul>
-            {utilites.map((utilit) => <li class="utilit">{utilit}</li>)}
-            
-            {codestudio.map((code)=> <li class="code">{code}</li>)}
-        </ul>
-    </div>
+    
 </section>
+<style>
+    .about-me{
+        padding: 195px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .datos-personales{
+        color: #FFF;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    h2{
+      font-size: 2rem;
+    }
+    p{
+      font-size: 1.5rem;
+      margin-top: 0;
+      
+    }
+    a{
+        text-decoration: none;
+        color: rgb(253, 189, 147);
+    }
+    a:hover{
+        color: rgb(255, 148, 77);
+    }
+    span{
+      color: rgb(253, 189, 147);
+      font-weight: bold;
+    }
+    span:hover{
+      color: rgb(255, 148, 77);
+      font-size: 1.555rem;
+      transition: 0.3s ease-in-out;
+    }
+    .creator{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    img{
+      filter: drop-shadow( 0 0 10px #ffffff);
+    }
+    img:hover{
+      transition: 0.3s ease-in-out;
+      filter: drop-shadow( 0 0 20px #ffffff);
+      transform: scale(1.2);
+      transition: 0.3s ease-in-out;
+    }
+    .kickShadow{
+        filter: drop-shadow( 0 0 10px #ffffff);
+        font-size: 1.5rem;
+    }
+    .kickShadow:hover{
+      transition: 0.3s ease-in-out;
+      filter: drop-shadow( 0 0 15px #ffffff);
+      font-size: 1.55rem;
+      transition: 0.3s ease-in-out;
+    }
+</style>

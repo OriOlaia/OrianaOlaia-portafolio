@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: rgb(21, 14, 158);
   color: #FFF;
@@ -14,4 +17,12 @@ body {
   margin: 0 auto;
   width: 100%;
   line-height: 1.5;
+}
+section{
+    height: 100vh;
+}
+section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 0.5rem;
 }
