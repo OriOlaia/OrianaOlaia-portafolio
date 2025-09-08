@@ -107,6 +107,15 @@ export const projects = [
       "Mi curriculum, proyectos y experiencia",
     ],
     languages: ["Astro", "Typescript", "CSS" ],
+  },{
+    title: "Terra Francesca",
+    image: null,
+    github: null,
+    link:null,
+    description: [
+      "Local de chocolateria, landing page",
+    ],
+    languages: ["html","Php", "CSS" ],
   },
   ];
 
