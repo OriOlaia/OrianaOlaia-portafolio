@@ -113,9 +113,9 @@ export const projects = [
     github: null,
     link:null,
     description: [
-      "Local de chocolateria, landing page",
+      "Local de chocolateria, landing page, ecommerce",
     ],
-    languages: ["html","Php", "CSS" ],
+    languages: ["Html","Php", "CSS", "JQuery", "Javascript", "Bootstrap" ],
   },
   ];
 
